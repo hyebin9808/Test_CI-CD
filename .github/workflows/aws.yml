@@ -25,4 +25,4 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_EC2_METADATA_DISABLED: true
       run: |
-        aws s3 sync http://khv0804.s3-website.ap-northeast-2.amazonaws.com/ --delete
+        aws s3 sync ./my-vue-app/dist s3://khv0804 --delete
